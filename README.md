@@ -1,20 +1,11 @@
 # Prigod Games
 
-[![Prigod Games — Small worlds. Big consequences.](public/og.png)](https://prigodgames.github.io/PrigodGames/)
+[![Prigod Games website](public/hero-castle.jpg)](https://prigodgames.github.io/PrigodGames/)
 
-Independent multiplayer adventures where every role matters.
+Prigod Games is a small game studio. We started with **Prigod Idle** and are currently developing **Prigod X**.
 
-## [Visit the Prigod Games website →](https://prigodgames.github.io/PrigodGames/)
+## [Visit the website →](https://prigodgames.github.io/PrigodGames/)
 
-Our debut title, **Project Overlord**, is an asymmetric multiplayer action game in development for PC. Five heroes enter a shifting dungeon while one player commands its monsters, traps, and hunger as the Overlord.
+Prigod X is an asymmetric multiplayer action game for PC. Five heroes enter a shifting dungeon while one player controls the Overlord.
 
-The website is published automatically through GitHub Pages from this repository.
-
-## Local development
-
-```bash
-npm install
-npm run dev
-```
-
-The production website source lives in `app/`; `index.html` is the static GitHub Pages entry point.
+This site is plain HTML and CSS and is hosted with GitHub Pages.

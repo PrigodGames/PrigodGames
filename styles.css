@@ -18,7 +18,7 @@ img { display: block; max-width: 100%; }
 button, a { -webkit-tap-highlight-color: transparent; }
 
 .page-shell { width: min(1360px, calc(100% - 96px)); margin-inline: auto; }
-.hero { min-height: 100svh; position: relative; display: flex; flex-direction: column; overflow: hidden; background: #101927 url('/hero-castle.jpg') center center / cover no-repeat; }
+.hero { min-height: 100svh; position: relative; display: flex; flex-direction: column; overflow: hidden; background: #101927 url('public/hero-castle.jpg') center center / cover no-repeat; }
 .hero::before { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(6, 12, 22, .96) 0%, rgba(7, 14, 24, .74) 36%, rgba(7, 14, 24, .1) 69%, rgba(7, 14, 24, .08) 100%); }
 .hero::after { content: ""; position: absolute; inset: 0; box-shadow: inset 0 -180px 150px -100px #0a1019; pointer-events: none; }
 .hero-scrim { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(5,10,17,.25), transparent 38%, rgba(5,10,17,.45)); }
@@ -88,6 +88,12 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .feature-strip b { color: var(--gold); font: 400 12px Georgia, serif; }
 .feature-strip span { color: rgba(255,255,255,.48); font-size: 12px; line-height: 1.6; }
 .feature-strip strong { display: block; color: var(--cream); font: 400 18px/1.2 Georgia, serif; margin-bottom: 8px; }
+.games-list { margin-top: 84px; border-top: 1px solid var(--line-dark); }
+.games-list article { min-height: 150px; display: grid; grid-template-columns: 70px 1fr 1fr; gap: 28px; align-items: center; border-bottom: 1px solid var(--line-dark); }
+.games-list .game-count { color: var(--gold); font: 400 12px Georgia, serif; }
+.games-list small { color: rgba(255,255,255,.42); font-size: 9px; font-weight: 700; letter-spacing: .18em; text-transform: uppercase; }
+.games-list h3 { margin: 8px 0 0; font: 400 32px/1 Georgia, serif; }
+.games-list p { margin: 0; color: rgba(255,255,255,.5); font-size: 13px; line-height: 1.7; max-width: 430px; }
 
 .studio-section { background: var(--paper); color: var(--ink); padding: 145px 0 125px; }
 .studio-grid { display: grid; grid-template-columns: 1.15fr .85fr; gap: 130px; align-items: end; }
@@ -105,7 +111,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .principles p { margin: 0; color: rgba(10,16,25,.54); font-size: 13px; line-height: 1.6; }
 
 .journey-section { position: relative; min-height: 810px; background: #080d14; overflow: hidden; display: flex; align-items: center; }
-.journey-bg { position: absolute; inset: 0; background: url('/hero-castle.jpg') center 48% / cover no-repeat; opacity: .28; filter: saturate(.65); }
+.journey-bg { position: absolute; inset: 0; background: url('public/hero-castle.jpg') center 48% / cover no-repeat; opacity: .28; filter: saturate(.65); }
 .journey-section::before { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, #080d14 0%, rgba(8,13,20,.94) 40%, rgba(8,13,20,.52) 72%, rgba(8,13,20,.8)); z-index: 1; }
 .journey-content { position: relative; z-index: 2; padding-block: 130px; }
 .journey-content h2 { font-size: clamp(60px, 6.5vw, 98px); }
@@ -139,6 +145,8 @@ footer { background: #070b11; color: var(--cream); }
   .feature-strip { grid-template-columns: 1fr; }
   .feature-strip > div, .feature-strip > div + div { padding: 28px 0; border-left: 0; border-top: 1px solid var(--line-dark); min-height: auto; }
   .feature-strip > div:first-child { border-top: 0; }
+  .games-list article { grid-template-columns: 55px 1fr; padding: 28px 0; }
+  .games-list p { grid-column: 2; }
   .principles { grid-template-columns: 1fr; }
   .principles article, .principles article + article { padding: 30px 0; border-left: 0; border-top: 1px solid var(--line-light); min-height: auto; }
   .principles article:first-child { border-top: 0; }
@@ -173,6 +181,9 @@ footer { background: #070b11; color: var(--cream); }
   .role-number { left: 28px; top: 30px; }
   .role-copy h3 { font-size: 37px; }
   .feature-strip { margin-top: 64px; }
+  .games-list { margin-top: 58px; }
+  .games-list article { grid-template-columns: 36px 1fr; gap: 14px; }
+  .games-list h3 { font-size: 27px; }
   .studio-statement h2 { font-size: 48px; }
   .studio-copy .dropcap { font-size: 20px; }
   .principles { margin-top: 65px; }
