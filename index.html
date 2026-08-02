@@ -9,12 +9,17 @@
     <meta property="og:description" content="Prigod Idle and Prigod X are in development. Parrot Island is to be announced.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://prigodgames.github.io/PrigodGames/">
-    <meta property="og:image" content="https://prigodgames.github.io/PrigodGames/public/hero-castle.jpg">
+    <meta property="og:image" content="https://prigodgames.github.io/PrigodGames/public/og.png">
+    <meta property="og:image:alt" content="Prigod Games — Prigod Idle, Prigod X, and Parrot Island">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="1727">
+    <meta property="og:image:height" content="911">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Prigod Games">
     <meta name="twitter:description" content="Prigod Idle and Prigod X are in development. Parrot Island is to be announced.">
-    <meta name="twitter:image" content="https://prigodgames.github.io/PrigodGames/public/hero-castle.jpg">
-    <link rel="icon" href="public/prigod-crest.png">
+    <meta name="twitter:image" content="https://prigodgames.github.io/PrigodGames/public/og.png">
+    <meta name="twitter:image:alt" content="Prigod Games — Prigod Idle, Prigod X, and Parrot Island">
+    <link rel="icon" href="public/prigod-games-mark.png">
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
@@ -23,7 +28,7 @@
         <div class="hero-scrim"></div>
         <header class="site-header page-shell">
           <a class="brand" href="#top" aria-label="Prigod Games home">
-            <span class="brand-mark" aria-hidden="true"><span></span></span>
+            <img class="brand-logo" src="public/prigod-games-mark.png" alt="">
             <span class="brand-name">Prigod <i>Games</i></span>
           </a>
           <nav class="main-nav" aria-label="Main navigation">
@@ -70,8 +75,7 @@
                 <div class="tag-row" aria-label="Prigod Idle features"><span>Idle progression</span><span>Card runs</span><span>Mobile + PC</span></div>
               </div>
               <div class="upcoming-links" aria-label="Planned Prigod Idle links">
-                <!-- Replace # with the Prigod Idle Steam URL when the page is live. -->
-                <a class="placeholder-link" href="#" aria-disabled="true" tabindex="-1">Steam page + demo <small>Coming soon</small></a>
+                <span class="coming-soon-label">Steam page + demo <small>Coming later</small></span>
               </div>
             </article>
 
@@ -85,8 +89,7 @@
                 <div class="tag-row" aria-label="Prigod X features"><span>Up to 6 players</span><span>Online multiplayer</span><span>PC</span></div>
               </div>
               <div class="upcoming-links" aria-label="Planned Prigod X links">
-                <!-- Replace # with the Prigod X Steam URL when the page is live. -->
-                <a class="placeholder-link" href="#" aria-disabled="true" tabindex="-1">Steam page + demo <small>Coming soon</small></a>
+                <span class="coming-soon-label">Steam page + demo <small>Coming later</small></span>
               </div>
             </article>
 
@@ -107,14 +110,23 @@
             <div class="gallery-heading">
               <div>
                 <div class="eyebrow"><span></span> Work in progress</div>
-                <h2 id="idle-gallery-title">Prigod Idle<br><em>screenshots.</em></h2>
+                <h2 id="idle-gallery-title">More on<br><em>Prigod Idle.</em></h2>
               </div>
-              <p>These are from the current build. The interface and artwork may still change.</p>
+              <div class="gallery-intro">
+                <p class="lede">An idle game built around short card runs and long-term progression.</p>
+                <p>Play a run when you feel like it, then come back to the resources your generators produced while you were away.</p>
+              </div>
+            </div>
+            <div class="idle-facts">
+              <article><span>01</span><h3>Card runs</h3><p>Choose a route, pick cards, and build around what the run gives you.</p></article>
+              <article><span>02</span><h3>Offline progress</h3><p>Generators keep producing resources while the game is closed.</p></article>
+              <article><span>03</span><h3>Gear and crafting</h3><p>Collect equipment, improve it, and try different builds.</p></article>
+              <article><span>04</span><h3>No microtransactions</h3><p>Everything is earned by playing. There is no real-money shop.</p></article>
             </div>
             <div class="screenshot-grid">
-              <figure><img src="public/prigod-idle-combat.jpg" alt="Prigod Idle combat screen with a knight fighting a training dummy" loading="lazy"><figcaption><span>01</span> Combat</figcaption></figure>
-              <figure><img src="public/prigod-idle-run-map.jpg" alt="Prigod Idle run map with several branching paths" loading="lazy"><figcaption><span>02</span> Choose a path</figcaption></figure>
-              <figure><img src="public/prigod-idle-housing.jpg" alt="Prigod Idle housing screen showing buildings and activities" loading="lazy"><figcaption><span>03</span> Housing</figcaption></figure>
+              <figure><img src="public/prigod-idle-dungeons.png" alt="Prigod Idle dungeon selection screen" loading="lazy"><figcaption><span>01</span> Dungeons</figcaption></figure>
+              <figure><img src="public/prigod-idle-crafting.png" alt="Prigod Idle crafting screen showing equipment categories" loading="lazy"><figcaption><span>02</span> Crafting</figcaption></figure>
+              <figure><img src="public/prigod-idle-chest-wheel.png" alt="Prigod Idle chest wheel screen" loading="lazy"><figcaption><span>03</span> Chest wheel</figcaption></figure>
             </div>
           </section>
 
@@ -157,12 +169,6 @@
                 <p>Control the monsters and traps, collect souls, and make the dungeon harder for the hero party.</p>
               </div>
             </article>
-          </div>
-
-          <div class="feature-strip">
-            <div><b>01</b><span><strong>Five against one</strong>Five heroes play against one Overlord.</span></div>
-            <div><b>02</b><span><strong>Changing dungeon</strong>Routes and threats can change between runs.</span></div>
-            <div><b>03</b><span><strong>PC multiplayer</strong>Online multiplayer for up to six people.</span></div>
           </div>
 
         </div>
@@ -209,7 +215,7 @@
 
       <footer>
         <div class="page-shell footer-top">
-          <a class="brand footer-brand" href="#top" aria-label="Back to top"><span class="brand-mark" aria-hidden="true"><span></span></span><span class="brand-name">Prigod <i>Games</i></span></a>
+          <a class="brand footer-brand" href="#top" aria-label="Back to top"><img class="brand-logo" src="public/prigod-games-mark.png" alt=""><span class="brand-name">Prigod <i>Games</i></span></a>
           <p>Prigod Idle <small>— in development</small><br>Prigod X <small>— in development</small><br>Parrot Island <small>— TBA</small></p>
           <div class="footer-links"><a href="#games">Games</a><a href="#studio">Studio</a><a href="https://github.com/PrigodGames/PrigodGames">GitHub ↗</a><a href="https://www.youtube.com/@PrigodGames" target="_blank" rel="noopener">YouTube ↗</a><a href="https://www.tiktok.com/@prigodgames" target="_blank" rel="noopener">TikTok ↗</a><a href="mailto:prigodgames@gmail.com">Email</a><a href="impressum.html">Impressum</a></div>
         </div>
