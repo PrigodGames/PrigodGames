@@ -56,6 +56,31 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .status-dot { display: inline-block; width: 7px; height: 7px; background: #e59543; border-radius: 50%; margin-right: 7px; box-shadow: 0 0 0 4px rgba(229,149,67,.13); }
 
 .project-section { background: var(--navy); padding: 150px 0 130px; border-top: 1px solid rgba(255,255,255,.04); }
+.development-heading { display: grid; grid-template-columns: 1.15fr .85fr; gap: 100px; align-items: end; margin-bottom: 64px; }
+.development-heading h2 { margin: 0; font: 400 clamp(52px, 6.2vw, 92px)/.93 Georgia, 'Times New Roman', serif; letter-spacing: -.05em; }
+.development-heading h2 em { color: var(--gold-light); }
+.development-heading > p { max-width: 540px; margin: 0 0 7px; padding-left: 34px; border-left: 1px solid var(--line-dark); color: rgba(244,240,232,.62); font-size: 15px; line-height: 1.8; }
+.development-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--line-dark); border: 1px solid var(--line-dark); }
+.development-card { min-height: 560px; position: relative; isolation: isolate; overflow: hidden; padding: 42px 46px; background: #111c2a; display: flex; flex-direction: column; justify-content: space-between; }
+.development-card::before { content: ""; position: absolute; z-index: -2; inset: 0; background: radial-gradient(circle at 90% 10%, rgba(86,157,178,.21), transparent 43%), linear-gradient(145deg, transparent 35%, rgba(5,10,17,.36)); }
+.development-card::after { content: ""; position: absolute; z-index: -1; inset: 0; opacity: .38; background-image: linear-gradient(rgba(255,255,255,.035) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.035) 1px, transparent 1px); background-size: 42px 42px; mask-image: linear-gradient(to bottom, black, transparent 80%); }
+.x-card { background: #191716; }
+.x-card::before { background: radial-gradient(circle at 90% 10%, rgba(210,104,39,.25), transparent 45%), linear-gradient(145deg, transparent 35%, rgba(5,10,17,.42)); }
+.card-watermark { position: absolute; z-index: -1; top: 45px; right: -20px; color: rgba(255,255,255,.055); font: italic 400 clamp(110px, 15vw, 230px)/.75 Georgia, serif; letter-spacing: -.09em; text-transform: uppercase; pointer-events: none; }
+.x-card .card-watermark { right: 36px; color: rgba(225,191,119,.075); }
+.card-topline { display: flex; justify-content: space-between; align-items: center; color: rgba(255,255,255,.32); font: 400 11px Georgia, serif; }
+.card-topline strong { color: var(--gold-light); font: 800 9px Arial, sans-serif; letter-spacing: .2em; text-transform: uppercase; }
+.card-topline .status-dot { margin-right: 9px; }
+.development-copy { max-width: 510px; margin-top: auto; padding-top: 130px; }
+.game-type { margin: 0 0 12px; color: var(--gold-light); font-size: 9px; font-weight: 800; letter-spacing: .22em; text-transform: uppercase; }
+.development-copy h3 { margin: 0 0 22px; font: 400 clamp(42px, 5vw, 66px)/.95 Georgia, serif; letter-spacing: -.035em; }
+.development-copy > p:not(.game-type) { min-height: 74px; margin: 0; color: rgba(244,240,232,.59); font-size: 14px; line-height: 1.75; }
+.upcoming-links { margin-top: 34px; padding-top: 22px; border-top: 1px solid var(--line-dark); }
+.placeholder-link { display: inline-flex; align-items: center; justify-content: space-between; gap: 28px; color: rgba(255,255,255,.64); font-size: 9px; font-weight: 800; letter-spacing: .16em; text-transform: uppercase; cursor: not-allowed; pointer-events: none; }
+.placeholder-link small { color: var(--gold-light); font-size: 8px; letter-spacing: .12em; }
+.upcoming-links .placeholder-link { width: 100%; }
+.project-divider { display: flex; align-items: center; gap: 24px; margin: 120px 0 72px; color: rgba(255,255,255,.36); font-size: 9px; font-weight: 800; letter-spacing: .22em; text-transform: uppercase; }
+.project-divider::after { content: ""; flex: 1; height: 1px; background: var(--line-dark); }
 .section-heading { display: grid; grid-template-columns: 1.1fr .9fr; align-items: end; gap: 100px; margin-bottom: 80px; }
 .project-kicker { margin: 0 0 14px; color: rgba(255,255,255,.42); font-size: 10px; letter-spacing: .2em; text-transform: uppercase; }
 .section-heading h2 { font-size: clamp(62px, 7vw, 105px); }
@@ -118,6 +143,8 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .journey-content > p { max-width: 560px; color: rgba(255,255,255,.6); font-size: 16px; line-height: 1.75; margin: 28px 0 34px; }
 .button-outline { border: 1px solid rgba(255,255,255,.48); }
 .button-outline:hover, .button-outline:focus-visible { background: var(--cream); color: var(--ink); }
+.social-placeholders { display: flex; flex-wrap: wrap; gap: 30px; margin-top: 28px; }
+.social-placeholders .placeholder-link { min-width: 180px; padding-bottom: 9px; border-bottom: 1px solid rgba(255,255,255,.24); }
 .milestones { display: grid; grid-template-columns: repeat(4, 1fr); margin-top: 100px; border-top: 1px solid var(--line-dark); }
 .milestone { position: relative; display: flex; gap: 16px; padding: 26px 20px 0 0; opacity: .35; }
 .milestone + .milestone { padding-left: 22px; }
@@ -132,14 +159,18 @@ button, a { -webkit-tap-highlight-color: transparent; }
 footer { background: #070b11; color: var(--cream); }
 .footer-top { min-height: 240px; display: grid; grid-template-columns: 1fr 1fr 1fr; align-items: center; border-bottom: 1px solid var(--line-dark); }
 .footer-top > p { margin: 0; color: rgba(255,255,255,.48); font: 400 19px/1.45 Georgia, serif; }
-.footer-links { justify-self: end; display: flex; gap: 30px; font-size: 9px; font-weight: 700; letter-spacing: .18em; text-transform: uppercase; }
+.footer-top > p small { color: rgba(255,255,255,.3); font: 700 8px Arial, sans-serif; letter-spacing: .12em; text-transform: uppercase; }
+.footer-links { justify-self: end; display: flex; justify-content: flex-end; flex-wrap: wrap; gap: 22px 30px; max-width: 470px; font-size: 9px; font-weight: 700; letter-spacing: .18em; text-transform: uppercase; }
+.footer-links .placeholder-link { color: rgba(255,255,255,.3); font-size: inherit; letter-spacing: inherit; }
 .footer-bottom { min-height: 72px; display: flex; align-items: center; justify-content: space-between; color: rgba(255,255,255,.32); font-size: 9px; letter-spacing: .16em; text-transform: uppercase; }
 
 @media (max-width: 1000px) {
   .page-shell { width: min(100% - 48px, 900px); }
   .site-header { grid-template-columns: 1fr auto; min-height: 92px; }
   .main-nav { display: none; }
-  .section-heading, .studio-grid { grid-template-columns: 1fr; gap: 55px; }
+  .development-heading, .section-heading, .studio-grid { grid-template-columns: 1fr; gap: 55px; }
+  .development-heading > p { max-width: 650px; }
+  .development-grid { grid-template-columns: 1fr; }
   .project-intro { max-width: 650px; }
   .roles-grid { grid-template-columns: 1fr; }
   .feature-strip { grid-template-columns: 1fr; }
@@ -166,8 +197,16 @@ footer { background: #070b11; color: var(--cream); }
   .hero-actions { align-items: flex-start; flex-direction: column; gap: 24px; }
   .hero-meta { grid-template-columns: 1fr; }
   .hero-meta > div { display: none; }
-  .hero-meta > div:first-child { display: flex; border-right: 0; }
+  .hero-meta > div:nth-child(-n+2) { display: flex; border-right: 0; }
   .project-section, .studio-section { padding: 95px 0 80px; }
+  .development-heading { margin-bottom: 44px; }
+  .development-heading h2 { font-size: 52px; }
+  .development-heading > p { padding: 24px 0 0; border-left: 0; border-top: 1px solid var(--line-dark); }
+  .development-card { min-height: 520px; padding: 30px 26px; }
+  .development-copy { padding-top: 110px; }
+  .development-copy h3 { font-size: 48px; }
+  .development-copy > p:not(.game-type) { min-height: 0; }
+  .project-divider { margin: 78px 0 52px; }
   .section-heading { margin-bottom: 55px; }
   .section-heading h2 { font-size: 58px; }
   .project-intro { padding: 28px 0 0; border-left: 0; border-top: 1px solid var(--line-dark); }
@@ -193,7 +232,7 @@ footer { background: #070b11; color: var(--cream); }
   .milestones { grid-template-columns: 1fr 1fr; gap: 35px 0; margin-top: 70px; }
   .milestone + .milestone { padding-left: 15px; }
   .footer-top { grid-template-columns: 1fr; gap: 32px; padding-block: 58px; }
-  .footer-links { justify-self: start; flex-wrap: wrap; }
+  .footer-links { justify-self: start; justify-content: flex-start; }
   .footer-bottom { min-height: 90px; align-items: flex-start; justify-content: center; flex-direction: column; gap: 8px; }
 }
 
