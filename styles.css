@@ -94,8 +94,9 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .idle-facts span { color: var(--gold); font: 400 11px Georgia, serif; }
 .idle-facts h3 { margin: 24px 0 10px; font: 400 20px/1.1 Georgia, serif; }
 .idle-facts p { margin: 0; color: rgba(255,255,255,.48); font-size: 12px; line-height: 1.65; }
-.screenshot-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
-.screenshot-grid figure { margin: 0; padding: 8px; border: 1px solid rgba(201,155,74,.28); background: #080d14; }
+.screenshot-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 18px; }
+.screenshot-grid figure { grid-column: span 2; margin: 0; padding: 8px; border: 1px solid rgba(201,155,74,.28); background: #080d14; }
+.screenshot-grid figure:nth-child(n+4) { grid-column: span 3; }
 .screenshot-grid img { width: 100%; aspect-ratio: 480 / 853; object-fit: cover; }
 .screenshot-grid figcaption { display: flex; gap: 13px; padding: 14px 5px 6px; color: rgba(255,255,255,.5); font-size: 9px; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; }
 .screenshot-grid figcaption span { color: var(--gold); font-family: Georgia, serif; }
@@ -189,6 +190,9 @@ footer { background: #070b11; color: var(--cream); }
   .gallery-intro { max-width: 650px; }
   .project-intro { max-width: 650px; }
   .roles-grid { grid-template-columns: 1fr; }
+  .screenshot-grid { grid-template-columns: repeat(2, 1fr); }
+  .screenshot-grid figure, .screenshot-grid figure:nth-child(n+4) { grid-column: auto; }
+  .screenshot-grid figure:last-child { grid-column: 1 / -1; width: calc(50% - 9px); justify-self: center; }
   .idle-facts { grid-template-columns: 1fr 1fr; }
   .idle-facts article:nth-child(3) { border-left: 0; border-top: 1px solid var(--line-dark); }
   .idle-facts article:nth-child(4) { border-top: 1px solid var(--line-dark); }
@@ -260,7 +264,7 @@ footer { background: #070b11; color: var(--cream); }
   .idle-facts article, .idle-facts article + article { min-height: auto; padding: 26px 0; border-left: 0; border-top: 1px solid var(--line-dark); }
   .idle-facts article:first-child { border-top: 0; }
   .screenshot-grid { grid-template-columns: 1fr; }
-  .screenshot-grid figure { max-width: 390px; margin-inline: auto; }
+  .screenshot-grid figure, .screenshot-grid figure:last-child { grid-column: auto; width: auto; max-width: 390px; margin-inline: auto; }
   .milestones { grid-template-columns: 1fr; }
   .milestone + .milestone { padding-left: 0; }
 }
