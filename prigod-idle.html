@@ -45,6 +45,16 @@
 
       <section class="project-section game-page-section">
         <div class="page-shell">
+          <section class="trailer-section" id="trailer" aria-labelledby="trailer-title">
+            <div class="eyebrow"><span></span> Trailer</div>
+            <h2 id="trailer-title">See it <em>in motion.</em></h2>
+            <div class="video-frame">
+              <video controls preload="metadata" poster="public/idle/trailer/trailer-poster.jpg">
+                <source src="public/idle/trailer/prigod-idle-trailer.mp4" type="video/mp4">
+              </video>
+            </div>
+          </section>
+
           <section class="idle-gallery" aria-labelledby="idle-gallery-title">
             <div class="gallery-heading">
               <div>
@@ -61,6 +71,16 @@
               <article><span>02</span><h3>Offline progress</h3><p>Generators keep producing resources while the game is closed.</p></article>
               <article><span>03</span><h3>Gear and crafting</h3><p>Collect and improve equipment, then experiment with unique builds. Different challenges reward different approaches.</p></article>
               <article><span>04</span><h3>No microtransactions</h3><p>Everything is earned by playing. There is no real-money shop.</p></article>
+            </div>
+            <div class="media-grid" aria-label="Gameplay clips">
+              <figure><video autoplay muted loop playsinline preload="metadata" src="public/idle/loops/combat_boss.mp4" aria-label="Boss fight against a red dragon"></video><figcaption><span>◆</span> Boss fights with real mechanics</figcaption></figure>
+              <figure><video autoplay muted loop playsinline preload="metadata" src="public/idle/loops/build_the_answer.mp4" aria-label="Reading a boss, rebuilding gear, then winning the rematch"></video><figcaption><span>◆</span> Hit a wall? Build the answer</figcaption></figure>
+              <figure><video autoplay muted loop playsinline preload="metadata" src="public/idle/loops/buildcraft_gear.mp4" aria-label="Gear screen with equipment, gems, and sockets"></video><figcaption><span>◆</span> Gear, gems, and sockets</figcaption></figure>
+              <figure><video autoplay muted loop playsinline preload="metadata" src="public/idle/loops/choose_your_route.mp4" aria-label="Choosing a path on the run map"></video><figcaption><span>◆</span> Choose your route</figcaption></figure>
+              <figure><video autoplay muted loop playsinline preload="metadata" src="public/idle/loops/tech_tree.mp4" aria-label="Scrolling through a large tech tree"></video><figcaption><span>◆</span> Four big tech trees</figcaption></figure>
+              <figure><video autoplay muted loop playsinline preload="metadata" src="public/idle/loops/minigames.mp4" aria-label="A montage of minigames"></video><figcaption><span>◆</span> 22 minigames on the side</figcaption></figure>
+              <figure><video autoplay muted loop playsinline preload="metadata" src="public/idle/loops/twenty_heroes.mp4" aria-label="Four heroes with distinct attacks"></video><figcaption><span>◆</span> 20+ heroes, distinct attacks</figcaption></figure>
+              <figure><video autoplay muted loop playsinline preload="metadata" src="public/idle/loops/fast_gear_swaps.mp4" aria-label="Swapping weapons and watching the hero change"></video><figcaption><span>◆</span> Swap builds in seconds</figcaption></figure>
             </div>
             <div class="screenshot-grid grid-9">
               <figure><button class="screenshot-open" type="button" data-caption="01 — Home" aria-label="Open a larger view of the Prigod Idle home screen"><img src="public/idle/01-home.webp" alt="Prigod Idle home screen with the hero ready to start a run" loading="lazy"><span aria-hidden="true">View larger</span></button><figcaption><span>01</span> Home</figcaption></figure>
@@ -80,6 +100,9 @@
             </dialog>
           </section>
 
+          <!-- STEAM PAGE TEXT: once the Steam store description is final, paste the
+               "About the Game" text here as its own section (same page-shell width),
+               so the website and the Steam page tell the same story. -->
           <div class="page-steam-cta">
             <div>
               <h2>Coming to <em>Steam.</em></h2>
@@ -126,6 +149,14 @@
         document.body.classList.remove('lightbox-open');
         lightboxImage.removeAttribute('src');
       });
+
+      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        document.querySelectorAll('.media-grid video').forEach((video) => {
+          video.removeAttribute('autoplay');
+          video.pause();
+          video.controls = true;
+        });
+      }
     </script>
   </body>
 </html>

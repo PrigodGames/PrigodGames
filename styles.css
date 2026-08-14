@@ -332,3 +332,18 @@ a.steam-cta:hover, a.steam-cta:focus-visible { background: rgba(201,155,74,.28);
   .page-steam-actions { justify-self: start; }
   .hero-page .hero-content { padding-block: 70px 90px; }
 }
+
+/* --- Trailer + gameplay clips (prigod-idle.html) --- */
+.trailer-section h2 { margin: 14px 0 34px; font: 400 clamp(44px, 5vw, 76px)/.95 Georgia, 'Times New Roman', serif; letter-spacing: -.05em; }
+.trailer-section h2 em { color: var(--gold-light); }
+.video-frame { padding: 8px; border: 1px solid rgba(201,155,74,.28); background: #080d14; }
+.video-frame video { display: block; width: 100%; aspect-ratio: 16 / 9; background: #000; }
+.media-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; margin-bottom: 60px; }
+.media-grid figure { margin: 0; padding: 8px; border: 1px solid rgba(201,155,74,.28); background: #080d14; }
+.media-grid video { display: block; width: 100%; aspect-ratio: 16 / 9; background: #000; }
+.media-grid figcaption { display: flex; gap: 13px; padding: 14px 5px 6px; color: rgba(255,255,255,.5); font-size: 9px; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; }
+.media-grid figcaption span { color: var(--gold); font-family: Georgia, serif; }
+@media (max-width: 680px) {
+  .media-grid { grid-template-columns: 1fr; }
+  .trailer-section h2 { font-size: 44px; }
+}
