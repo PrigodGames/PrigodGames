@@ -307,3 +307,28 @@ footer { background: #070b11; color: var(--cream); }
   .legal-grid { grid-template-columns: 1fr; margin-top: 48px; }
   .legal-card { min-height: auto; padding: 30px 25px; }
 }
+
+/* --- Game pages (prigod-idle.html / break-the-seal.html) --- */
+.hero-page { min-height: auto; }
+.hero-page .hero-content { padding-block: 100px 120px; }
+.hero-page h1 { font-size: clamp(52px, 6.2vw, 98px); }
+.steam-note { color: rgba(255,255,255,.45); font-size: 10px; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; }
+a.steam-cta { width: auto; transition: background .2s, border-color .2s; }
+a.steam-cta:hover, a.steam-cta:focus-visible { background: rgba(201,155,74,.28); border-color: var(--gold-light); }
+.hero-steam-cta { width: auto; min-width: 300px; cursor: default; }
+.card-page-link { display: inline-flex; align-items: center; gap: 10px; margin-bottom: 18px; font-size: 10px; font-weight: 800; letter-spacing: .16em; text-transform: uppercase; color: var(--gold-light); border-bottom: 1px solid rgba(225,191,119,.4); padding-bottom: 6px; width: max-content; transition: color .2s, border-color .2s; }
+.card-page-link:hover, .card-page-link:focus-visible { color: var(--cream); border-color: currentColor; }
+.upcoming-links a.steam-cta { width: 100%; }
+.game-page-section { padding-top: 110px; }
+.page-steam-cta { margin-top: 120px; padding: 64px 60px; border: 1px solid rgba(201,155,74,.35); background: linear-gradient(145deg, #101b2a, #0b1420); display: grid; grid-template-columns: 1.4fr 1fr; gap: 40px; align-items: center; }
+.page-steam-cta h2 { margin: 0 0 18px; font: 400 clamp(38px, 4vw, 64px)/.95 Georgia, 'Times New Roman', serif; letter-spacing: -.04em; }
+.page-steam-cta p { max-width: 520px; margin: 0; color: rgba(244,240,232,.62); font-size: 15px; line-height: 1.75; }
+.page-steam-actions { display: flex; flex-direction: column; gap: 16px; align-items: flex-start; justify-self: end; }
+@media (min-width: 1001px) {
+  .screenshot-grid.grid-9 figure:nth-child(n+4) { grid-column: span 2; }
+}
+@media (max-width: 1000px) {
+  .page-steam-cta { grid-template-columns: 1fr; padding: 44px 34px; }
+  .page-steam-actions { justify-self: start; }
+  .hero-page .hero-content { padding-block: 70px 90px; }
+}
