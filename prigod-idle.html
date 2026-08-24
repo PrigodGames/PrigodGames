@@ -17,10 +17,11 @@
     <link rel="icon" href="public/prigod-games-mark.png">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="press.css">
+    <script src="site.js" defer></script>
   </head>
   <body>
     <main>
-      <section class="hero hero-page" id="top">
+      <section class="hero hero-page prigod-hero" id="top">
         <div class="hero-scrim"></div>
         <header class="site-header page-shell">
           <a class="brand" href="index.html" aria-label="Prigod Games home">
@@ -30,13 +31,14 @@
           <nav class="main-nav" aria-label="Main navigation">
             <a href="prigod-idle.html" aria-current="page">Prigod Idle</a><a href="break-the-seal.html">Break the Seal</a><a href="index.html#studio">Studio</a><a href="index.html#journey">Updates</a><a href="prigod-idle-press.html">Press</a>
           </nav>
-          <a class="header-cta" href="https://github.com/PrigodGames/PrigodGames">Follow development <span aria-hidden="true">↗</span></a>
+          <button class="nav-toggle" type="button" aria-expanded="false" aria-label="Open navigation"><span></span><span></span><span></span></button>
+          <a class="header-cta" href="https://store.steampowered.com/dev/PrigodGames" target="_blank" rel="noopener">Follow development <span aria-hidden="true">↗</span></a>
         </header>
 
         <div class="hero-content page-shell">
           <div class="eyebrow light"><span></span> In development · PC · Steam</div>
           <h1>Prigod <em>Idle.</em></h1>
-          <p>A fantasy autobattler with idle progression and deep buildcrafting. Skill trees, abilities, pets, events, dungeons and hundreds of unique items give you endless builds to try. Made for PC, not mobile. No microtransactions.</p>
+          <p>A fantasy autobattler with idle progression and deep buildcrafting. Skill trees, abilities, pets, events, dungeons and hundreds of unique items give you endless builds to try. Designed for PC. No microtransactions.</p>
           <div class="hero-actions">
             <a class="button button-gold" href="https://store.steampowered.com/app/5091900/Prigod_Idle/">Wishlist on Steam <span aria-hidden="true">↗</span></a>
             <span class="steam-note">Free demo out now</span>
@@ -49,10 +51,8 @@
           <section class="trailer-section" id="trailer" aria-labelledby="trailer-title">
             <div class="eyebrow"><span></span> Trailer</div>
             <h2 id="trailer-title">See it <em>in motion.</em></h2>
-            <div class="video-frame">
-              <video controls preload="metadata" poster="public/idle/trailer/trailer-poster.jpg">
-                <source src="public/idle/trailer/prigod-idle-trailer.mp4" type="video/mp4">
-              </video>
+            <div class="video-frame youtube-frame">
+              <iframe src="https://www.youtube-nocookie.com/embed/OnoZA0FQGnw" title="Prigod Idle trailer on YouTube" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
             </div>
           </section>
 
@@ -74,28 +74,27 @@
               <article><span>04</span><h3>No microtransactions</h3><p>Everything is earned by playing. There is no real-money shop.</p></article>
             </div>
             <div class="media-grid" aria-label="Gameplay clips">
-              <figure><video autoplay muted loop playsinline preload="metadata" src="public/idle/loops/combat_boss.mp4" aria-label="Boss fight against a red dragon"></video><figcaption><span>◆</span> Boss fights with real mechanics</figcaption></figure>
-              <figure><video autoplay muted loop playsinline preload="metadata" src="public/idle/loops/build_the_answer.mp4" aria-label="Reading a boss, rebuilding gear, then winning the rematch"></video><figcaption><span>◆</span> Hit a wall? Build the answer</figcaption></figure>
-              <figure><video autoplay muted loop playsinline preload="metadata" src="public/idle/loops/buildcraft_gear.mp4" aria-label="Gear screen with equipment, gems, and sockets"></video><figcaption><span>◆</span> Gear, gems, and sockets</figcaption></figure>
-              <figure><video autoplay muted loop playsinline preload="metadata" src="public/idle/loops/choose_your_route.mp4" aria-label="Choosing a path on the run map"></video><figcaption><span>◆</span> Choose your route</figcaption></figure>
-              <figure><video autoplay muted loop playsinline preload="metadata" src="public/idle/loops/tech_tree.mp4" aria-label="Scrolling through a large tech tree"></video><figcaption><span>◆</span> Four big tech trees</figcaption></figure>
-              <figure><video autoplay muted loop playsinline preload="metadata" src="public/idle/loops/minigames.mp4" aria-label="A montage of minigames"></video><figcaption><span>◆</span> 22 minigames on the side</figcaption></figure>
-              <figure><video autoplay muted loop playsinline preload="metadata" src="public/idle/loops/twenty_heroes.mp4" aria-label="Four heroes with distinct attacks"></video><figcaption><span>◆</span> 20+ heroes, distinct attacks</figcaption></figure>
-              <figure><video autoplay muted loop playsinline preload="metadata" src="public/idle/loops/fast_gear_swaps.mp4" aria-label="Swapping weapons and watching the hero change"></video><figcaption><span>◆</span> Swap builds in seconds</figcaption></figure>
+              <figure><video muted loop playsinline preload="none" data-autoplay poster="public/idle/press/loops/combat_boss.jpg" src="public/idle/loops/combat_boss.mp4" aria-label="Boss fight against a red dragon"></video><figcaption><span>◆</span> Boss fights with real mechanics</figcaption></figure>
+              <figure><video muted loop playsinline preload="none" data-autoplay poster="public/idle/press/loops/build_the_answer.jpg" src="public/idle/loops/build_the_answer.mp4" aria-label="Reading a boss, rebuilding gear, then winning the rematch"></video><figcaption><span>◆</span> Hit a wall? Build the answer</figcaption></figure>
+              <figure><video muted loop playsinline preload="none" data-autoplay poster="public/idle/press/loops/buildcraft_gear.jpg" src="public/idle/loops/buildcraft_gear.mp4" aria-label="Gear screen with equipment, gems, and sockets"></video><figcaption><span>◆</span> Gear, gems, and sockets</figcaption></figure>
+              <figure><video muted loop playsinline preload="none" data-autoplay poster="public/idle/press/loops/choose_your_route.jpg" src="public/idle/loops/choose_your_route.mp4" aria-label="Choosing a path on the run map"></video><figcaption><span>◆</span> Choose your route</figcaption></figure>
+              <figure><video muted loop playsinline preload="none" data-autoplay poster="public/idle/press/loops/tech_tree.jpg" src="public/idle/loops/tech_tree.mp4" aria-label="Scrolling through a large tech tree"></video><figcaption><span>◆</span> Four big tech trees</figcaption></figure>
+              <figure><video muted loop playsinline preload="none" data-autoplay poster="public/idle/press/loops/minigames.jpg" src="public/idle/loops/minigames.mp4" aria-label="A montage of minigames"></video><figcaption><span>◆</span> 22 minigames on the side</figcaption></figure>
+              <figure><video muted loop playsinline preload="none" data-autoplay poster="public/idle/press/loops/twenty_heroes.jpg" src="public/idle/loops/twenty_heroes.mp4" aria-label="Four heroes with distinct attacks"></video><figcaption><span>◆</span> 20+ heroes, distinct attacks</figcaption></figure>
+              <figure><video muted loop playsinline preload="none" data-autoplay poster="public/idle/press/loops/fast_gear_swaps.jpg" src="public/idle/loops/fast_gear_swaps.mp4" aria-label="Swapping weapons and watching the hero change"></video><figcaption><span>◆</span> Swap builds in seconds</figcaption></figure>
             </div>
-            <div class="screenshot-grid grid-9">
-              <figure><button class="screenshot-open" type="button" data-caption="01 · Home" aria-label="Open a larger view of the Prigod Idle home screen"><img src="public/idle/01-home.webp" alt="Prigod Idle home screen with the hero ready to start a run" loading="lazy"><span aria-hidden="true">View larger</span></button><figcaption><span>01</span> Home</figcaption></figure>
-              <figure><button class="screenshot-open" type="button" data-caption="02 · Heroes" aria-label="Open a larger view of the Prigod Idle hero roster"><img src="public/idle/02-heroes.webp" alt="Prigod Idle hero roster with unlockable characters" loading="lazy"><span aria-hidden="true">View larger</span></button><figcaption><span>02</span> Heroes</figcaption></figure>
-              <figure><button class="screenshot-open" type="button" data-caption="03 · Boss fight" aria-label="Open a larger view of a Prigod Idle boss fight"><img src="public/idle/03-boss-fight.webp" alt="Prigod Idle hero battling a boss" loading="lazy"><span aria-hidden="true">View larger</span></button><figcaption><span>03</span> Boss fight</figcaption></figure>
-              <figure><button class="screenshot-open" type="button" data-caption="04 · World Tree" aria-label="Open a larger view of the Prigod Idle World Tree"><img src="public/idle/04-world-tree.webp" alt="Prigod Idle World Tree progression screen" loading="lazy"><span aria-hidden="true">View larger</span></button><figcaption><span>04</span> World Tree</figcaption></figure>
-              <figure><button class="screenshot-open" type="button" data-caption="05 · Tech trees" aria-label="Open a larger view of the Prigod Idle tech trees"><img src="public/idle/05-tech.webp" alt="Prigod Idle tech tree with multiple upgrade paths" loading="lazy"><span aria-hidden="true">View larger</span></button><figcaption><span>05</span> Tech trees</figcaption></figure>
-              <figure><button class="screenshot-open" type="button" data-caption="06 · Pets" aria-label="Open a larger view of the Prigod Idle pets screen"><img src="public/idle/06-pets.webp" alt="Prigod Idle pets screen with equipped and unlockable companions" loading="lazy"><span aria-hidden="true">View larger</span></button><figcaption><span>06</span> Pets</figcaption></figure>
-              <figure><button class="screenshot-open" type="button" data-caption="07 · Housing" aria-label="Open a larger view of the Prigod Idle housing map"><img src="public/idle/07-housing.webp" alt="Prigod Idle housing map with buildings and garden" loading="lazy"><span aria-hidden="true">View larger</span></button><figcaption><span>07</span> Housing</figcaption></figure>
-              <figure><button class="screenshot-open" type="button" data-caption="08 · Dungeons" aria-label="Open a larger view of the Prigod Idle dungeon select"><img src="public/idle/08-dungeons.webp" alt="Prigod Idle dungeon selection screen" loading="lazy"><span aria-hidden="true">View larger</span></button><figcaption><span>08</span> Dungeons</figcaption></figure>
-              <figure><button class="screenshot-open" type="button" data-caption="09 · Gem Forge" aria-label="Open a larger view of the Prigod Idle Gem Forge"><img src="public/idle/09-gemforge.webp" alt="Prigod Idle Gem Forge crafting screen" loading="lazy"><span aria-hidden="true">View larger</span></button><figcaption><span>09</span> Gem Forge</figcaption></figure>
+            <div class="screenshot-grid desktop-screenshot-grid">
+              <figure><button class="screenshot-open" type="button" data-caption="01 · Desktop panels" aria-label="Open a larger view of Prigod Idle using three desktop panels"><img src="public/idle/press/screenshots/15_desktop_panes.webp" alt="Prigod Idle with the portrait play area between idle generators and the gear bag" loading="lazy"><span aria-hidden="true">View larger</span></button><figcaption><span>01</span> Desktop panels</figcaption></figure>
+              <figure><button class="screenshot-open" type="button" data-caption="02 · Desktop tech and codex" aria-label="Open a larger view of Prigod Idle with the relic codex and tech tree in side panels"><img src="public/idle/press/screenshots/16_desktop_tech_codex.webp" alt="Prigod Idle with the relic codex and tech tree open beside the main game" loading="lazy"><span aria-hidden="true">View larger</span></button><figcaption><span>02</span> Desktop tech and codex</figcaption></figure>
+              <figure><button class="screenshot-open" type="button" data-caption="03 · Desktop chests and bag" aria-label="Open a larger view of Prigod Idle with chests and the gear bag in side panels"><img src="public/idle/press/screenshots/17_desktop_bag_chests.webp" alt="Prigod Idle with chests and a full gear bag open beside the main game" loading="lazy"><span aria-hidden="true">View larger</span></button><figcaption><span>03</span> Desktop chests and bag</figcaption></figure>
+              <figure><button class="screenshot-open" type="button" data-caption="04 · Boss fight" aria-label="Open a larger view of a Prigod Idle boss fight"><img src="public/idle/press/screenshots/01_boss_fight.webp" alt="Prigod Idle hero battling a boss in a dark fullscreen frame" loading="lazy"><span aria-hidden="true">View larger</span></button><figcaption><span>04</span> Boss fight</figcaption></figure>
+              <figure><button class="screenshot-open" type="button" data-caption="05 · Heroes" aria-label="Open a larger view of the Prigod Idle hero roster"><img src="public/idle/press/screenshots/03_heroes.webp" alt="Prigod Idle hero roster with unlockable characters" loading="lazy"><span aria-hidden="true">View larger</span></button><figcaption><span>05</span> Heroes</figcaption></figure>
+              <figure><button class="screenshot-open" type="button" data-caption="06 · Gem Forge" aria-label="Open a larger view of the Prigod Idle Gem Forge"><img src="public/idle/press/screenshots/08_gemforge.webp" alt="Prigod Idle Gem Forge crafting screen" loading="lazy"><span aria-hidden="true">View larger</span></button><figcaption><span>06</span> Gem Forge</figcaption></figure>
+              <figure><button class="screenshot-open" type="button" data-caption="07 · World Tree" aria-label="Open a larger view of the Prigod Idle World Tree"><img src="public/idle/press/screenshots/05_world_tree.webp" alt="Prigod Idle World Tree progression screen" loading="lazy"><span aria-hidden="true">View larger</span></button><figcaption><span>07</span> World Tree</figcaption></figure>
+              <figure><button class="screenshot-open" type="button" data-caption="08 · Spring Bloom" aria-label="Open a larger view of the Prigod Idle Spring Bloom event"><img src="public/idle/press/screenshots/12_spring_bloom.webp" alt="Prigod Idle Spring Bloom event minigame" loading="lazy"><span aria-hidden="true">View larger</span></button><figcaption><span>08</span> Spring Bloom</figcaption></figure>
             </div>
             <dialog class="lightbox" id="screenshot-lightbox" aria-labelledby="lightbox-caption">
-              <button class="lightbox-close" type="button" aria-label="Close larger screenshot">×</button>
+              <button class="lightbox-close" type="button" aria-label="Close larger screenshot">Close <span aria-hidden="true">×</span></button>
               <img id="lightbox-image" alt="">
               <p id="lightbox-caption"></p>
             </dialog>
@@ -157,16 +156,15 @@
         <div class="page-shell footer-top">
           <a class="brand footer-brand" href="index.html" aria-label="Prigod Games home"><img class="brand-logo" src="public/prigod-games-mark.png" alt=""><span class="brand-name">Prigod <i>Games</i></span></a>
           <p>Prigod Idle <small>· in development</small><br>Break the Seal <small>· in development</small><br>Parrot Island <small>· TBA</small></p>
-          <div class="footer-links"><a href="index.html#games">Games</a><a href="index.html#studio">Studio</a><a href="prigod-idle-press.html">Press kit</a><a href="https://store.steampowered.com/dev/PrigodGames" target="_blank" rel="noopener">Steam ↗</a><a href="https://steamcommunity.com/groups/PrigodGames" target="_blank" rel="noopener">Steam group ↗</a><a href="https://github.com/PrigodGames/PrigodGames">GitHub ↗</a><a href="https://www.youtube.com/@PrigodGames" target="_blank" rel="noopener">YouTube ↗</a><a href="https://www.tiktok.com/@prigod.games" target="_blank" rel="noopener">TikTok ↗</a><a href="mailto:prigodgames@gmail.com">Email</a><a href="impressum.html">Impressum</a><a href="privacy.html">Privacy</a></div>
+          <div class="footer-links"><a href="index.html#games">Games</a><a href="index.html#studio">Studio</a><a href="prigod-idle-press.html">Press kit</a><a href="https://store.steampowered.com/dev/PrigodGames" target="_blank" rel="noopener">Steam ↗</a><a href="https://steamcommunity.com/groups/PrigodGames" target="_blank" rel="noopener">Steam group ↗</a><a href="https://www.youtube.com/@PrigodGames" target="_blank" rel="noopener">YouTube ↗</a><a href="https://www.tiktok.com/@prigod.games" target="_blank" rel="noopener">TikTok ↗</a><a href="mailto:prigodgames@gmail.com">Email</a><a href="impressum.html">Impressum</a><a href="privacy.html">Privacy</a></div>
         </div>
-        <div class="page-shell footer-bottom"><span>© 2026 Prigod Games</span><span>Nicolas Brauner · Germany</span></div>
+        <div class="page-shell footer-bottom"><span>© 2026 Prigod Games</span><span>Nicolas · Germany</span></div>
       </footer>
     </main>
     <script>
       const lightbox = document.querySelector('#screenshot-lightbox');
       const lightboxImage = document.querySelector('#lightbox-image');
       const lightboxCaption = document.querySelector('#lightbox-caption');
-
       document.querySelectorAll('.screenshot-open').forEach((button) => {
         button.addEventListener('click', () => {
           const image = button.querySelector('img');
@@ -179,6 +177,9 @@
       });
 
       document.querySelector('.lightbox-close').addEventListener('click', () => lightbox.close());
+      document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape' && lightbox.open) lightbox.close();
+      });
       lightbox.addEventListener('click', (event) => {
         if (event.target === lightbox) lightbox.close();
       });
