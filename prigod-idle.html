@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Prigod Idle · Prigod Games</title>
-    <meta name="description" content="Prigod Idle is a fantasy idle autobattler with deep buildcrafting: runs, gear, pets, dungeons, and huge tech trees. Coming to Steam.">
+    <meta name="description" content="Prigod Idle is a fantasy idle autobattler with deep buildcrafting: runs, gear, pets, dungeons, and huge tech trees. Coming to Steam and Google Play on 4 November 2026.">
     <meta property="og:title" content="Prigod Idle">
     <meta property="og:description" content="A fantasy idle autobattler with deep buildcrafting. Free demo out now on Steam. Wishlist it.">
     <meta property="og:type" content="website">
@@ -20,6 +20,9 @@
     <meta name="twitter:image" content="https://prigodgames.github.io/PrigodGames/public/idle/press/keyart/main_capsule.png">
     <meta name="twitter:image:alt" content="Prigod Idle heroes facing a golem, demon, and dragon">
     <link rel="icon" href="public/prigod-games-mark.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500&amp;display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="press.css">
     <script src="site.js" defer></script>
@@ -43,7 +46,7 @@
         <div class="hero-content page-shell">
           <div class="eyebrow light"><span></span> Launching 4 November 2026 · Steam + Android</div>
           <h1>Prigod <em>Idle.</em></h1>
-          <p>A fantasy autobattler with idle progression and deep buildcrafting. Skill trees, abilities, pets, events, dungeons and hundreds of unique items give you endless builds to try. Designed for PC. No microtransactions.</p>
+          <p>A fantasy autobattler with idle progression and deep buildcrafting. Skill trees, abilities, pets, events, dungeons and hundreds of unique items give you endless builds to try. Coming to PC and Android. No microtransactions.</p>
           <div class="hero-actions">
             <a class="button button-gold" href="https://store.steampowered.com/app/5091900/Prigod_Idle/">Wishlist on Steam <span aria-hidden="true">↗</span></a>
             <span class="steam-note">Free demo out now</span>
@@ -179,24 +182,39 @@
           <!-- STORE-COPY:END -->
 
           <section class="store-section roadmap-section" id="roadmap" aria-labelledby="roadmap-title">
-            <div class="eyebrow"><span></span> After launch</div>
-            <h2 id="roadmap-title">What comes <em>next.</em></h2>
             <div class="roadmap-intro">
               <p>Prigod Idle launches on 4 November 2026 on Steam and Android via Google Play.</p>
-              <p>Only free Updates, no paid DLCs are planned</p>
+              <p>Only free Updates, no paid DLCs are planned.</p>
             </div>
-            <ol class="roadmap-grid" aria-label="Planned free updates">
-              <li><span aria-hidden="true">01</span><strong>Launch fixes</strong></li>
-              <li><span aria-hidden="true">02</span><strong>More events</strong></li>
-              <li><span aria-hidden="true">03</span><strong>More achievements</strong></li>
-              <li><span aria-hidden="true">04</span><strong>Wardrobe</strong></li>
-              <li><span aria-hidden="true">05</span><strong>Armor dyeing</strong></li>
-              <li><span aria-hidden="true">06</span><strong>More hats</strong></li>
-              <li><span aria-hidden="true">07</span><strong>More enemies</strong></li>
-              <li><span aria-hidden="true">08</span><strong>More bosses</strong></li>
-              <li><span aria-hidden="true">09</span><strong>More stages</strong></li>
-              <li><span aria-hidden="true">10</span><strong>More languages</strong></li>
-            </ol>
+            <div class="roadmap-panel">
+              <header class="roadmap-head">
+                <span>Free updates after launch</span>
+                <h2 id="roadmap-title">What Comes Next</h2>
+                <img src="public/idle/roadmap/synty-divider.png" alt="">
+                <p>A growing roadmap of free updates planned beyond launch.</p>
+              </header>
+              <div class="roadmap-stage">
+                <img class="roadmap-sentinel roadmap-king" src="public/idle/roadmap/king.png" alt="">
+                <img class="roadmap-sentinel roadmap-dragon" src="public/idle/roadmap/dragon-knight.png" alt="">
+                <svg class="roadmap-trail" viewBox="0 0 1000 630" preserveAspectRatio="none" aria-hidden="true">
+                  <path class="roadmap-trail-shadow" d="M130 110 C240 75 310 105 390 110 S560 70 650 110 S850 110 860 218 C870 290 850 335 800 360 S680 345 590 360 S450 375 370 360 S120 345 150 420 C180 470 160 520 240 545 S370 525 460 545 S600 560 680 545"></path>
+                  <path class="roadmap-trail-gold" d="M130 110 C240 75 310 105 390 110 S560 70 650 110 S850 110 860 218 C870 290 850 335 800 360 S680 345 590 360 S450 375 370 360 S120 345 150 420 C180 470 160 520 240 545 S370 525 460 545 S600 560 680 545"></path>
+                  <path class="roadmap-trail-future" d="M680 545 C790 570 845 520 900 490"></path>
+                </svg>
+                <article class="roadmap-node roadmap-major roadmap-p1"><img src="public/idle/roadmap/fixes.png" alt=""><div><strong>Launch fixes</strong><span>Polish and fixes based on player feedback.</span></div></article>
+                <article class="roadmap-node roadmap-major roadmap-p2"><img src="public/idle/roadmap/achievement.png" alt=""><div><strong>More achievements</strong><span>200+ in-game achievements; Steam limits the launch set.</span></div></article>
+                <article class="roadmap-node roadmap-major roadmap-p3"><img src="public/idle/roadmap/trading-card.png" alt=""><div><strong>Steam trading cards</strong><span>Cards, badges and profile rewards.</span></div></article>
+                <article class="roadmap-node roadmap-major roadmap-p4"><img src="public/idle/roadmap/dungeon.png" alt=""><div><strong>Dungeon crawl mode</strong><span>Branching rooms and escalating fights.</span></div></article>
+                <article class="roadmap-node roadmap-p5"><img src="public/idle/roadmap/event.png" alt=""><div><strong>More events</strong></div></article>
+                <article class="roadmap-node roadmap-p6"><img src="public/idle/roadmap/wardrobe.png" alt=""><div><strong>Wardrobe</strong></div></article>
+                <article class="roadmap-node roadmap-p7"><img class="roadmap-pink-armor" src="public/idle/roadmap/armor.png" alt=""><div><strong>Armor dyeing</strong></div></article>
+                <article class="roadmap-node roadmap-p8"><img src="public/idle/roadmap/hat.png" alt=""><div><strong>More hats</strong></div></article>
+                <article class="roadmap-node roadmap-p9"><img src="public/idle/roadmap/boss.png" alt=""><div><strong>More enemies &amp; bosses</strong></div></article>
+                <article class="roadmap-node roadmap-p10"><img src="public/idle/roadmap/stages.png" alt=""><div><strong>More stages</strong></div></article>
+                <article class="roadmap-node roadmap-p11"><img src="public/idle/roadmap/language.png" alt=""><div><strong>More languages</strong></div></article>
+                <article class="roadmap-node roadmap-p12"><img src="public/idle/roadmap/unknown.png" alt=""><div><strong>More to come</strong></div></article>
+              </div>
+            </div>
           </section>
           <section class="page-steam-cta" aria-labelledby="steam-cta-title">
             <div class="steam-cta-art">
