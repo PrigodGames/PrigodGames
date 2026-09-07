@@ -18,7 +18,7 @@ img { display: block; max-width: 100%; }
 button, a { -webkit-tap-highlight-color: transparent; }
 
 .page-shell { width: min(1360px, calc(100% - 96px)); margin-inline: auto; }
-.hero { min-height: 100svh; position: relative; display: flex; flex-direction: column; overflow: hidden; background: #101927 url('public/hero-castle.jpg') center center / cover no-repeat; }
+.hero { min-height: 100svh; position: relative; display: flex; flex-direction: column; overflow: hidden; background: #101927 url('public/hero-prigod-idle.jpg') center center / cover no-repeat; }
 .hero::before { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(6, 12, 22, .96) 0%, rgba(7, 14, 24, .74) 36%, rgba(7, 14, 24, .1) 69%, rgba(7, 14, 24, .08) 100%); }
 .hero::after { content: ""; position: absolute; inset: 0; box-shadow: inset 0 -180px 150px -100px #0a1019; pointer-events: none; }
 .hero-scrim { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(5,10,17,.25), transparent 38%, rgba(5,10,17,.45)); }
@@ -178,7 +178,7 @@ body.lightbox-open { overflow: hidden; }
 .principles p { margin: 0; color: rgba(10,16,25,.54); font-size: 13px; line-height: 1.6; }
 
 .journey-section { position: relative; min-height: 810px; background: #080d14; overflow: hidden; display: flex; align-items: center; }
-.journey-bg { position: absolute; inset: 0; background: url('public/hero-castle.jpg') center 48% / cover no-repeat; opacity: .28; filter: saturate(.65); }
+.journey-bg { position: absolute; inset: 0; background: url('public/hero-prigod-idle.jpg') center 48% / cover no-repeat; opacity: .28; filter: saturate(.65); }
 .journey-section::before { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, #080d14 0%, rgba(8,13,20,.94) 40%, rgba(8,13,20,.52) 72%, rgba(8,13,20,.8)); z-index: 1; }
 .journey-content { position: relative; z-index: 2; padding-block: 130px; }
 .journey-content h2 { font-size: clamp(60px, 6.5vw, 98px); }
