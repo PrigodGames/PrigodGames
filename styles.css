@@ -196,6 +196,7 @@ body.lightbox-open { overflow: hidden; }
 .icon-discord { --icon: url("public/icons/discord.svg"); }
 .icon-youtube { --icon: url("public/icons/youtube.svg"); }
 .icon-tiktok { --icon: url("public/icons/tiktok.svg"); }
+.icon-instagram { --icon: url("public/icons/instagram.svg"); }
 .icon-mail { --icon: url("public/icons/mail.svg"); }
 .milestones { display: grid; grid-template-columns: repeat(3, 1fr); margin-top: 100px; border-top: 1px solid var(--line-dark); }
 .milestone { position: relative; display: flex; gap: 16px; padding: 26px 20px 0 0; opacity: .35; }
