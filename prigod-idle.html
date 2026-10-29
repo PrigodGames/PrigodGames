@@ -215,6 +215,24 @@
               </div>
             </div>
           </section>
+          <section class="player-videos" id="videos" aria-labelledby="videos-title">
+            <div class="eyebrow"><span></span> Videos from players</div>
+            <h2 id="videos-title">Watch others <em>play it.</em></h2>
+            <p class="player-videos-intro">Creators who played Prigod Idle on their channel. Thank you all! Made a video yourself? Send me the link on <a href="discord.html">Discord</a> and I will add it here.</p>
+            <div class="player-video-grid">
+              <article class="player-video">
+                <button class="player-video-open" type="button" data-video="BuF_kDXwLUc" aria-label="Play the video by Alamar's Domain">
+                  <img src="public/idle/videos/BuF_kDXwLUc.webp" alt="" loading="lazy">
+                  <span class="player-video-play" aria-hidden="true"></span>
+                  <span class="player-video-time">2:00:16</span>
+                </button>
+                <div class="player-video-meta">
+                  <strong>Prigod Idle Gameplay - Incremental Auto Battler Game</strong>
+                  <a href="https://www.youtube.com/@AlamarsDomain" target="_blank" rel="noopener"><span class="social-icon icon-youtube" aria-hidden="true"></span>Alamar's Domain <span aria-hidden="true">↗</span></a>
+                </div>
+              </article>
+            </div>
+          </section>
           <section class="page-steam-cta" aria-labelledby="steam-cta-title">
             <div class="steam-cta-art">
               <img src="public/idle/main-capsule.webp" alt="Prigod Idle knight with a crystal sword facing a white wolf in a forest" loading="lazy">
@@ -272,6 +290,19 @@
       lightbox.addEventListener('close', () => {
         document.body.classList.remove('lightbox-open');
         lightboxImage.removeAttribute('src');
+      });
+
+      // A player video loads YouTube only after a click, then plays in place.
+      document.querySelectorAll('.player-video-open').forEach((button) => {
+        button.addEventListener('click', () => {
+          const frame = document.createElement('iframe');
+          frame.src = `https://www.youtube-nocookie.com/embed/${button.dataset.video}?autoplay=1`;
+          frame.title = button.getAttribute('aria-label');
+          frame.referrerPolicy = 'strict-origin-when-cross-origin';
+          frame.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
+          frame.allowFullscreen = true;
+          button.replaceWith(frame);
+        });
       });
 
       if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
